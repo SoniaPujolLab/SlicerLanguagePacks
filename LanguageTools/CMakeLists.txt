@@ -4,6 +4,8 @@ set(MODULE_NAME LanguageTools)
 #-----------------------------------------------------------------------------
 set(MODULE_PYTHON_SCRIPTS
   ${MODULE_NAME}.py
+  rtl/__init__.py
+  rtl/RTLSupport.py
   )
 
 set(MODULE_PYTHON_RESOURCES
