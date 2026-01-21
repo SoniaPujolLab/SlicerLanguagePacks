@@ -30,3 +30,9 @@
 
 
 A video tutorial of the different steps is available [here](https://www.youtube.com/watch?v=8Omd_qQTJOk).
+
+### Reset language to English
+
+To reset the application language to English, hit `Ctrl`-`3` (on macOS: `Cmd` - `3`), copy-paste this into Python console, and hit `Enter`:
+
+    slicer.app.settings().setValue('language', 'en_US'); restart();
