@@ -1,5 +1,7 @@
 # SlicerLanguagePacks extension
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19513116.svg)](https://doi.org/10.5281/zenodo.19513116)
+
 [3D Slicer](https://www.slicer.org) extension for creating, editing, and storing translations for Slicer core and extensions.
 
 ![](Docs/ExampleTranslations.png)
