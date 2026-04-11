@@ -2,179 +2,179 @@
 
 يهدف هذا المستند إلى تزويد المساهمين الجدد في الترجمة المجتمعية لبرنامج 3D Slicer على [Weblate](https://hosted.weblate.org/projects/3d-slicer/3d-slicer/) بنصائح حول كيفية المساعدة في ترجمة واجهة البرنامج بسهولة ودقة.
 
-This document is a work in progress. Feel free to suggest changes via [GitHub "pull request"](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files).
+هذه الوثيقة قيد الإعداد. لا تتردد في اقتراح أي تعديلات عبر [GitHub "pull request"](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files).
 
-## 1. Get Started on Weblate
+## 1. البدء في استخدام Weblate
 
-Weblate is a collaborative translation tool for open source projects. With the help of our wonderful contributors, we are working towards a full translation of the 3D Slicer interface, through a mainly community based effort. Thank you for joining us!
+Weblate هي أداة ترجمة تعاونية مخصصة لمشاريع البرمجيات مفتوحة المصدر. وبمساعدة مساهمينا الرائعين، نسعى إلى ترجمة واجهة برنامج 3D Slicer بالكامل، من خلال جهد يعتمد بشكل أساسي على المجتمع. شكرًا لانضمامك إلينا!
 
-You can find a video tutorial on how to create a Weblate account [here](https://youtu.be/LSvc9MmrxPA)
+يمكنك العثور على فيديو تعليمي حول كيفية إنشاء حساب على Weblate [هنا](https://youtu.be/LSvc9MmrxPA)
 
-If you create an account using your email and a username, you will receive a confirmation email. Open the link it contains, and follow the instructions.
+إذا قمت بإنشاء حساب باستخدام بريدك الإلكتروني واسم المستخدم، فستتلقى رسالة تأكيد عبر البريد الإلكتروني. افتح الرابط الموجود فيها واتبع التعليمات.
 
-It is preferable to use your GitHub account to access Weblate. This will allow Weblate to automatically synchronize your projects with the associated GitHub repository.
+يُفضل استخدام حساب GitHub الخاص بك للوصول إلى Weblate. سيسمح ذلك لـ Weblate بمزامنة مشاريعك تلقائيًا مع مستودع GitHub المرتبط بها.
 
-If you sign in using GitHub, you will be redirected to a GitHub page where you will be asked to confirm granting Weblate access to your GitHub account. 
+إذا قمت بتسجيل الدخول باستخدام GitHub، فسيتم توجيهك إلى صفحة GitHub حيث سيُطلب منك تأكيد منح Weblate حق الوصول إلى حساب GitHub الخاص بك. 
 
-[Here](https://github.com/SoniaPujolLab/SlicerLanguagePacks/blob/main/HowToUse.md) is a link to a tutorial on how to install and set up the Slicer Language Pack to enable other languages in the app.
+[هنا](https://github.com/SoniaPujolLab/SlicerLanguagePacks/blob/main/HowToUse_ar.md) رابط إلى دليل إرشادي حول كيفية تثبيت حزمة لغات Slicer وإعدادها لتمكين اللغات الأخرى في التطبيق.
 
-**Note:** Be sure to repeat the `Update translation files` and `Restart the application` steps every now and then to have the latest and most complete translations, as new terms may have been translated since you last used Slicer.
+**ملاحظة:** تأكد من تكرار خطوات `تحديث ملفات الترجمة` و`إعادة تشغيل التطبيق` بين الحين والآخر للحصول على أحدث الترجمات وأكثرها اكتمالاً، حيث قد تكون هناك مصطلحات جديدة تمت ترجمتها منذ آخر مرة استخدمت فيها Slicer.
 
-## 2. Locating a string on the Slicer Graphic User Interface (GUI)
+## 2. تحديد موقع سلسلة نصية في واجهة المستخدم الرسومية لبرنامج Slicer
 
-A specific string can have many different occurrences on the Slicer GUI, sometimes even in the same module.  The position and function of an element on the interface can affect its meaning and by extension, its translation. It is therefore helpful to know these few tips to identify exactly which element of the interface you are translating on Weblate at a given moment.
+قد تظهر سلسلة نصية معينة في عدة مواضع مختلفة على واجهة المستخدم الرسومية لبرنامج Slicer، بل وأحيانًا في نفس الوحدة النمطية.  يمكن أن يؤثر موضع العنصر ووظيفته على الواجهة على معناه، وبالتالي على ترجمته. ولذلك، من المفيد معرفة هذه النصائح القليلة لتحديد العنصر الذي تقوم بترجمته بالضبط على Weblate في أي لحظة.
 
-### The "key" indicator
-In the upper right corner of the translation on Weblate, you will notice the word `Key` in bold, followed by a string. That string can help you know approximately (sometimes exactly)  in which module or window of the GUI, the term you are translating is located, as illustrated below.
+### مؤشر ”key“
+في الزاوية اليمنى العليا من الترجمة على Weblate، ستلاحظ كلمة `Key` بالخط العريض، متبوعة بسلسلة نصية. يمكن أن تساعدك تلك السلسلة النصية في معرفة تقريبًا (وأحيانًا بدقة)  في أي وحدة أو نافذة من واجهة المستخدم الرسومية (GUI) يوجد المصطلح الذي تقوم بترجمته، كما هو موضح أدناه.
 
-![](Docs/key1.png)
+![](Docs/keyR1.png)
 
-![](Docs/key2.PNG)
+![](Docs/keyR2.PNG)
 
-### Search for untranslated strings
+### البحث عن السلاسل غير المترجمة
 
-It may be advisable to start translation of strings with the main application user interface. To achieve this, enter search term that excludes strings in CLI (command-line interface modules) modules: `NOT state:translated AND NOT (key:"CLI_")`
+قد يكون من المستحسن البدء بترجمة السلاسل الموجودة في واجهة المستخدم الرئيسية للتطبيق. ولتحقيق ذلك، أدخل مصطلح بحث يستبعد السلاسل الموجودة في وحدات CLI (وحدات واجهة سطر الأوامر): `NOT state:translated AND NOT (key:”CLI_“)`
 
-### Nearby strings
-As mentioned above, you may have multiple occurrences of a term in the same module’s interface. In that case, it can be useful to rely on the elements surrounding the one you are translating. Weblate pairs each string with a list of strings that are directly before or after the element in the GUI code.
+### السلاسل المجاورة
+كما ذكر أعلاه، قد يكون هناك عدة تكرارات لمصطلح ما في واجهة الوحدة النمطية نفسها. في هذه الحالة، قد يكون من المفيد الاعتماد على العناصر المحيطة بالعنصر الذي تقوم بترجمته. يقوم Weblate بإقران كل سلسلة بقائمة من السلاسل الموجودة مباشرة قبل أو بعد العنصر في كود واجهة المستخدم الرسومية.
 
 ![](Docs/nearbyStrings.png)
 ![](Docs/TranslationGuideline/nearbyStrings2.png)
 
-### "Source string location"
-The `source string location` tag on Weblate can help you go one level further and find exactly **which line of code contains the string** you are currently translating. It can be found in the `String Information` box on the lower right.
+### ”موقع السلسلة المصدرية“
+يمكن أن تساعدك علامة `موقع السلسلة المصدرية` في Weblate على التعمق أكثر والعثور بالضبط على **السطر الذي يحتوي على السلسلة** التي تقوم بترجمتها حاليًا. ويمكن العثور عليها في مربع `معلومات السلسلة` في أسفل اليمين.
 
 ![](Docs/stringlocation1.png)
 
 ![](Docs/stringlocation2.png)
 ![](Docs/stringlocation3.png)
 
-*(the reason the line numbers do not match in this specific example is that the code has been updated in between when the translation files were uploaded and now)*
+*(السبب في عدم تطابق أرقام الأسطر في هذا المثال بالتحديد هو أن الكود قد تم تحديثه في الفترة الفاصلة بين وقت تحميل ملفات الترجمة والوقت الحالي)*
 
-## 3. Translation of text
+## 3. ترجمة النص
 
-### Placeholders and special characters
+### العناصر النائبة والأحرف الخاصة
 
-Source text is mostly plain text, but there are some special characters and conventions that common Qt and Python translation tools use. A short summary:
+يكون النص الأصلي في الغالب نصًا عاديًا، ولكن هناك بعض الأحرف الخاصة والقواعد التي تستخدمها أدوات الترجمة الشائعة في Qt وPython. فيما يلي ملخص موجز:
 
-- Placeholders are used for text that is replaced by specific names or numbers when the application is used. Placeholders can appear as `%1`, `%2`, ... (Qt-style) or as `{some_name}`, `{some_number}` (Python-style) in the source text. Placeholders must not be translated but kept unchanged in the translated text.
-- Keyboard shortcuts are designated by the `&` prefix within a string (Qt-style). For example `&New file` will make the letter `N` a keyboard shortcut. Keyboard shortcuts are recommended to be preserved. Since single `&` character designates a keyboard shortcut, `&&` must be used to place ampersand character in the text.
+- تُستخدم العناصر النائبة للنص الذي يتم استبداله بأسماء أو أرقام محددة عند استخدام التطبيق. يمكن أن تظهر العناصر النائبة على شكل `%1`، `%2`، ... (نمط Qt) أو على شكل `{some_name}`، `{some_number}` (نمط Python) في النص المصدر. يجب عدم ترجمة العناصر النائبة بل إبقائها دون تغيير في النص المترجم.
+- يتم تحديد اختصارات لوحة المفاتيح بواسطة البادئة `&` داخل سلسلة (نمط Qt). على سبيل المثال، سيجعل `&New file` الحرف `N` اختصارًا للوحة المفاتيح. يوصى بالحفاظ على اختصارات لوحة المفاتيح. نظرًا لأن الحرف `&` الفردي يشير إلى اختصار لوحة المفاتيح، يجب استخدام `&&` لوضع حرف العلامة التجارية في النص.
 
-Examples:
+أمثلة:
 
-- Source text: `The {name} module could not be registered`
-  - Good translation: `A {name} modult nen lehetett regisztralni`
-  - Bad translation: `A {nev} modult nen lehetett regisztralni` (`name` placeholder was modified to `nev`)
-- Source text: `Node %1 is exported successfully to %2`
-  - Good translation: `%1 elemet sikeresen mentettuk %2 helyre`
-  - Good translation: `Elmentettuk %2 helyre %1 elemet` (order of placholders can be changed in the translated text)
-  - Bad translation: `%1 elemet sikeresen mentettuk` (`%2` placeholder is missing)
-- Source text: `Create &New File`
-  - Good translation: `Keszitsen &Uj Fajlt`
-  - Bad translation: `Keszitsen Uj Fajlt` (works, but keyboard shortcut is no longer available for this button or menu item)
-- Source text: `Help && Acknowledgement`
-  - Good translation: `Segitseg && Koszonetnyilvanitas`
-  - Good translation: `Segitseg es Koszonetnyilvanitas` (not necessary to use ampersand if it is not commonly used in the target language)
-  - Bad translation: `Segitseg & Koszonetnyilvanitas` (single ampersand will be interpreted as a keyboard shortcut)
+- النص الأصلي: `تعذر تسجيل الوحدة النمطية {name}`
+  - ترجمة صحيحة: `A {name} modult nen lehetett regisztralni`
+  - ترجمة خاطئة: `A {nev} modult nen lehetett regisztralni` (تم تعديل العنصر النائب `name` إلى `nev`)
+- النص الأصلي: `تم تصدير العنصر %1 بنجاح إلى %2`
+  - ترجمة جيدة: `تم حفظ العنصر %1 بنجاح في %2`
+  - ترجمة جيدة: `تم حفظ العنصر %1 في %2` (يمكن تغيير ترتيب العناصر النائبة في النص المترجم)
+  - ترجمة سيئة: `تم حفظ العنصر %1 بنجاح` (العنصر النائب `%2` مفقود)
+- النص الأصلي: `إنشاء &ملف جديد`
+  - ترجمة جيدة: `Keszitsen &Uj Fajlt`
+  - ترجمة سيئة: `Keszitsen Uj Fajlt` (تعمل، لكن اختصار لوحة المفاتيح لم يعد متاحًا لهذا الزر أو عنصر القائمة)
+- النص الأصلي: `مساعدة && شكر وتقدير`
+  - ترجمة جيدة: `Segitseg && Koszonetnyilvanitas`
+  - ترجمة جيدة: `Segitseg es Koszonetnyilvanitas` (ليس من الضروري استخدام علامة العطف إذا لم تكن شائعة الاستخدام في اللغة الهدف)
+  - ترجمة سيئة: `Segitseg & Koszonetnyilvanitas` (سيتم تفسير علامة العطف المفردة على أنها اختصار لوحة مفاتيح)
 
-### Translation of difficult terms
+### ترجمة المصطلحات الصعبة
 
-On the complex interface of 3D Slicer, certain terms can have very context-specific meanings that are likely to lose their accuracy if not translated carefully. Locating the string on the interface or using the element it designates can help understanding better the exact definition of the term and therefore translating it as accurately as possible.
-Another way to ensure the highest quality of translation is to take advantage of the community based approach that our internationalization process is based on.
+في واجهة برنامج 3D Slicer المعقدة، قد يكون لبعض المصطلحات معانٍ مرتبطة بالسياق بشكل وثيق، ومن المحتمل أن تفقد دقتها إذا لم تُترجم بعناية. يمكن أن يساعد تحديد موقع السلسلة في الواجهة أو استخدام العنصر الذي تشير إليه في فهم التعريف الدقيق للمصطلح بشكل أفضل، وبالتالي ترجمته بأكبر قدر ممكن من الدقة.
+هناك طريقة أخرى لضمان أعلى جودة للترجمة وهي الاستفادة من النهج المجتمعي الذي تستند إليه عملية التدويل لدينا.
 
-#### The `Suggest` button
-When translating a string on Weblate, you have the option to submit your translation and move to the next item, submit your translation and stay on the same page or to submit your translation as a suggestion.
+#### زر `Suggest`
+عند ترجمة سلسلة نصية على Weblate، لديك خيار إرسال ترجمتك والانتقال إلى العنصر التالي، أو إرسال ترجمتك والبقاء على نفس الصفحة، أو إرسال ترجمتك كاقتراح.
 
 ![](Docs/suggest1.png) 
 
- When you choose to do the latter, the difference between your translation and the current one are highlighted in green and the parts they replace are striked through and highlighted in red as illustrated below.
+ عندما تختار الخيار الثاني، يتم تمييز الاختلافات بين ترجمتك والترجمة الحالية باللون الأخضر، بينما يتم شطب الأجزاء التي تحل محلها وتمييزها باللون الأحمر، كما هو موضح أدناه.
  
 ![](Docs/suggest2.png) 
 
-The suggestion can then be approved or edited or discarded by yourself or another user or an assigned proofreader.
+يمكن بعد ذلك الموافقة على الاقتراح أو تعديله أو رفضه من قِبلك أو من قِبل مستخدم آخر أو من قِبل مدقق لغوي معين.
 
 ![](Docs/suggest3.png) 
 
-This option is useful in case you are unsure of the translation you submitted and you would like to take the time to understand the term better before confirming it or you would like to get a second opinion from other users.
+يُعد هذا الخيار مفيدًا في حالة عدم تأكدك من الترجمة التي أرسلتها، ورغبتك في أخذ الوقت الكافي لفهم المصطلح بشكل أفضل قبل تأكيده، أو رغبتك في الحصول على رأي ثانٍ من مستخدمين آخرين.
 
-#### The comments section
-Weblate also offers the possibility to leave a comment on a string’s translation page. This allows you to engage with other contributors in your language and start a conversation about the understanding each of you have of the term and eventually agree on a common meaning and translation.
+#### قسم التعليقات
+يوفر Weblate أيضًا إمكانية ترك تعليق على صفحة ترجمة السلسلة. يتيح لك ذلك التفاعل مع المساهمين الآخرين في لغتك وبدء محادثة حول فهم كل منكم للمصطلح والاتفاق في النهاية على معنى وترجمة مشتركة.
 
 ![](Docs/comments1.png) 
 
-To make sure you stay engaged in the discussions related to the project, you can update your settings to be notified when a new comment is posted; and in case the notifications become overwhelming, you can always adjust them to fit you.
-e.g.: while an assigned proofreader would have to be notified of all the discussion updates, you can choose to set up Weblate to notify you only for comments related to translations you have submitted or the ones in which you are mentioned.
+لضمان مواكبتك للمناقشات المتعلقة بالمشروع، يمكنك تحديث إعداداتك لتتلقى إشعارًا عند نشر تعليق جديد؛ وفي حال أصبحت الإشعارات كثيرة جدًّا، يمكنك دائمًا تعديلها بما يناسبك.
+على سبيل المثال: في حين يتعين إخطار المراجع المكلف بجميع تحديثات المناقشة، يمكنك اختيار ضبط Weblate بحيث يُعلمك فقط بالتعليقات المتعلقة بالترجمات التي قمت بإرسالها أو تلك التي تمت الإشارة إليك فيها.
 
 ![](Docs/comments2.png) 
 
-You can change your notification settings [here](https://hosted.weblate.org/accounts/profile/#notifications).
+يمكنك تغيير إعدادات الإشعارات [هنا](https://hosted.weblate.org/accounts/profile/#notifications).
 
-#### Untranslatable strings
-Any string starting containing `vtk` or  `MRML` should not be translated and should be reported as bugs in Slicer bug reports. 
+#### العبارات غير القابلة للترجمة
+يجب عدم ترجمة أي عبارة تبدأ بـ `vtk` أو `MRML`، بل يجب الإبلاغ عنها كأخطاء في تقارير أخطاء Slicer. 
 
-**Example:**
+**مثال:**
 
 ![](Docs/untranslatable1.png)
 
-You may also tag them with the `read-only` flag (read more about Weblate flags [here](https://docs.weblate.org/en/latest/admin/checks.html#customizing-behavior-using-flags))
+يمكنك أيضًا تمييزها بعلامة `read-only` (اقرأ المزيد عن علامات Weblate [هنا])(https://docs.weblate.org/en/latest/admin/checks.html#customizing-behavior-using-flags)
 
 ![](Docs/untranslatable2.png)
 ![](Docs/untranslatable3.png)
 
-## 4. Validation of translation
+## 4. التحقق من صحة الترجمة
 
-There are several ways to indicate that a translation needs to be reviewed. The most commonly used by our contributors are the `needs editing` checkbox and the `suggest` feature.  
+هناك عدة طرق للإشارة إلى أن الترجمة تحتاج إلى مراجعة. وأكثر الطرق شيوعًا بين المساهمين لدينا هي مربع الاختيار `needs editing` وميزة `suggest`.  
 
 ![](Docs/validation1.png)
 
 ![](Docs/validation2.png)
 
-## 5. Style
+## 5. الأسلوب
 
-For consistent style, it is important for all translators for a specific language use the same guidelines. Detailed Style Guide for most languages are available on [Microsoft's website](https://www.microsoft.com/en-us/language/StyleGuides). If translators agree in using a style guide then they only need to provide a download link to that style guide and document any differences they wish to make to those guidelines.
+لضمان اتساق الأسلوب، من المهم أن يستخدم جميع المترجمين لنفس اللغة نفس الإرشادات. يتوفر دليل أسلوب مفصل لمعظم اللغات على [موقع Microsoft](https://www.microsoft.com/en-us/language/StyleGuides). إذا اتفق المترجمون على استخدام دليل أسلوب معين، فيكفيهم فقط توفير رابط تنزيل لهذا الدليل وتوثيق أي اختلافات يرغبون في إدخالها على تلك الإرشادات.
 
-## 6. Glossary terms
+## 6. مصطلحات المسرد
 
-Some English words are used in Slicer with a very specific meaning. For example `volume` refers to a 3D image.
-Some of these words are listed in the [Slicer Glossary].(https://slicer.readthedocs.io/en/latest/user_guide/getting_started.html#glossary).
+تُستخدم بعض الكلمات الإنجليزية في Slicer بمعنى محدد للغاية. على سبيل المثال، تشير كلمة `volume` إلى صورة ثلاثية الأبعاد.
+بعض هذه الكلمات مدرجة في [مسرد Slicer].(https://slicer.readthedocs.io/en/latest/user_guide/getting_started.html#glossary).
 
-When translating these words to another language, it often makes sense to not translate these words directly,
-but find a word that better describes the actual meaning, and translate that word. For example, instead of translating
-`volume`, it makes more sense to translate the word `image` instead.
+عند ترجمة هذه الكلمات إلى لغة أخرى، غالبًا ما يكون من الأفضل عدم ترجمتها حرفيًا،
+بل البحث عن كلمة تصف المعنى الفعلي بشكل أفضل، وترجمة تلك الكلمة. على سبيل المثال، بدلاً من ترجمة
+`volume`، من الأفضل ترجمة كلمة `image`.
 
-If you encounter a word that seems to make sense to translate based on a different English word, please add it to the Glossary on weblate
-by clicking on the `Add term to glossary` link on the right side of the screen and describe what word was used by adding to the explanation: `Translate as "something"`.
-See for example the `glyph` term: https://hosted.weblate.org/translate/3d-slicer/glossary/en/?checksum=d948d4a61ccd080a
+إذا صادفت كلمة يبدو من المنطقي ترجمتها استنادًا إلى كلمة إنجليزية مختلفة، يرجى إضافتها إلى المسرد على weblate
+بالنقر على رابط `إضافة مصطلح إلى المسرد` على الجانب الأيمن من الشاشة ووصف الكلمة المستخدمة بإضافة إلى الشرح: `ترجم كـ “شيء ما”`.
+انظر على سبيل المثال مصطلح `glyph`: https://hosted.weblate.org/translate/3d-slicer/glossary/en/?checksum=d948d4a61ccd080a
 
-Each project on Weblate has a **glossary** associated with it. It is a collection of terms, usually complex in meaning or very specific to the project scope, therefore requiring an extensive definition and sometimes extra precisions about the meaning and use of the string. The items listed in the glossary are then linked to the strings that contain them, in the main translation component (when a string contains a glossary term, there will be a reference to the term on the right of the interface in a panel labeled `Glossary`). This can be helpful in translating more or less difficult terms from the interface.
+يحتوي كل مشروع على Weblate على **مسرد** مرتبط به. وهو عبارة عن مجموعة من المصطلحات، التي عادةً ما تكون معقدة المعنى أو محددة جدًا في نطاق المشروع، مما يتطلب تعريفًا شاملاً وأحيانًا توضيحات إضافية حول معنى السلسلة واستخدامها. ثم يتم ربط العناصر المدرجة في المسرد بالسلاسل التي تحتوي عليها، في مكون الترجمة الرئيسي (عندما تحتوي سلسلة على مصطلح من المسرد، سيكون هناك إشارة إلى المصطلح على يمين الواجهة في لوحة بعنوان `Glossary`). يمكن أن يكون هذا مفيدًا في ترجمة المصطلحات الصعبة نسبيًا من الواجهة.
 
 ![](Docs/TranslationGuidelines/glossary1.png)
 
-The `Glossary` panel will contain no information in the case of a term or string that is not in the glossary. However, if the term is referenced in the glossary, you will have a suggested `translation` as well as the `explanation` of the term. You can rely on the latter to make sure you have a better understanding of the term and therefore provide the most accurate translation possible.
+لن تحتوي لوحة `المصطلحات` على أي معلومات في حالة وجود مصطلح أو سلسلة نصية غير موجودة في قائمة المصطلحات. ومع ذلك، إذا كان المصطلح مذكورًا في قائمة المصطلحات، فستظهر لك `ترجمة` مقترحة بالإضافة إلى `شرح` للمصطلح. يمكنك الاعتماد على هذا الشرح للتأكد من فهمك للمصطلح بشكل أفضل، وبالتالي تقديم الترجمة الأكثر دقةً ممكنة.
 
-Note that the `explanation` is only available in English. 
+يرجى ملاحظة أن `الشرح` متاح باللغة الإنجليزية فقط. 
 
-To find good translation for generic computing terms, you can use [Microsoft's terminology search function](https://www.microsoft.com/en-us/language/Search).
+للعثور على ترجمة جيدة للمصطلحات الحاسوبية العامة، يمكنك استخدام [وظيفة البحث عن المصطلحات من Microsoft](https://www.microsoft.com/en-us/language/Search).
 
-## 7. Find Text tool of the Language Packs Extension
+## 7. أداة ”البحث عن نص“ في ملحق حزم اللغات
  
- To use the `Find text` feature follow the following workflow :
+ لاستخدام ميزة `البحث عن نص`، اتبع الخطوات التالية:
  
-  - `1` : Select `Enable text finder` in the Find text section of the Language Packs extension.
+  - `1`: حدد `تمكين أداة البحث عن النص` في قسم `البحث عن نص` بملحق حزم اللغات.
   
-  ![](Docs/EnableT.png)
+  ![](Docs/ENT.png)
   
-  - `2` :  To activate the `Enable text finder` option, select a Slicer module and press `Ctrl+6` or `Ctrl+Shift+6` for `Windows`, and `Command+6` for `Mac` on any string of the user interface.
+  - `2` :  لتنشيط خيار `تمكين أداة البحث عن النص`، حدد وحدة `Slicer` واضغط على `Ctrl+6` أو `Ctrl+Shift+6` في نظام `Windows`، و`Command+6` في نظام  `Mac` على أي سلسلة نصية في واجهة المستخدم.
   
   ![](Docs/ActivateET.PNG)
   
-  - `3` : Click on `Add DICOM Data` to locate the string in the Slicer Weblate repository.
-  - `4` : Select `exact match`
+  - `3` : انقر على `إضافة بيانات DICOM` لتحديد موقع السلسلة في مستودع Slicer Weblate.
+  - `4` : حدد `exact match`
   
   ![](Docs/ExactM.png)
   
-  - `5` : The link will take you to the location of the strings in the Slicer Weblate repository. 
+  - `5` : سيأخذك الرابط إلى موقع السلاسل في مستودع Slicer Weblate. 
   
 ![](Docs/Resultat.png)
 
-For more explanation, you can watch a pratical video [here](https://www.youtube.com/watch?v=td-KHzdrko8)
+لمزيد من التوضيح، يمكنك مشاهدة فيديو توضيحي [هنا](https://www.youtube.com/watch?v=td-KHzdrko8)
