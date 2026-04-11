@@ -62,7 +62,7 @@ Ayuda a traducir el proyecto en [Hosted Weblate](https://hosted.weblate.org/enga
 
 - [Útmutató magyarra fordításhoz](TranslationGuidelines_hu.md)
 
-### Arabic  اللغة العربية
+### اللغة العربية (Arabic)
 
 ملحق لبرنامج 3D Slicer مخصص لإنشاء الترجمات وتحريرها وتخزينها لنواة Slicer وملحقاته.
 
