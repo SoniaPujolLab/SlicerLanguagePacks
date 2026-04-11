@@ -29,7 +29,7 @@ Weblate هي أداة ترجمة تعاونية مخصصة لمشاريع الب
 
 ![](Docs/keyR1.png)
 
-![](Docs/keyR2.png)
+![](Docs/keyR2.PNG)
 
 ### البحث عن السلاسل غير المترجمة
 
@@ -166,15 +166,15 @@ Weblate هي أداة ترجمة تعاونية مخصصة لمشاريع الب
   
   - `2` :  لتنشيط خيار `تمكين أداة البحث عن النص`، حدد وحدة `Slicer` واضغط على `Ctrl+6` أو `Ctrl+Shift+6` في نظام `Windows`، و`Command+6` في نظام  `Mac` على أي سلسلة نصية في واجهة المستخدم.
   
-  ![](Docs/ActivateET.PNG)
+  ![](Docs/AET.png)
   
   - `3` : انقر على `إضافة بيانات DICOM` لتحديد موقع السلسلة في مستودع Slicer Weblate.
   - `4` : حدد `exact match`
   
-  ![](Docs/ExactM.png)
+  ![](Docs/EM.png)
   
   - `5` : سيأخذك الرابط إلى موقع السلاسل في مستودع Slicer Weblate. 
   
-![](Docs/Resultat.png)
+![](Docs/RES.png)
 
 لمزيد من التوضيح، يمكنك مشاهدة فيديو توضيحي [هنا](https://www.youtube.com/watch?v=td-KHzdrko8)
