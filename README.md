@@ -64,3 +64,4 @@ Ayuda a traducir el proyecto en [Hosted Weblate](https://hosted.weblate.org/enga
 
 ### Arabic  اللغة العربية
 
+  - [إرشادات الترجمة](TranslationGuidelines_ar.md)
