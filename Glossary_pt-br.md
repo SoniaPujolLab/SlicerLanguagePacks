@@ -1,4 +1,4 @@
-Glossário
+Slicer Glossário
 
 Os termos utilizados em vários domínios da computação de imagens médicas e biomédicas e de imagens clínicas nem sempre são consistentes. Esta seção define os termos que são habitualmente utilizados no 3D Slicer, especialmente aqueles que podem ter um significado diferente em outros contextos.
 
