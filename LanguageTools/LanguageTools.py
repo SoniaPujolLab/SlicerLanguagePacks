@@ -47,7 +47,7 @@ Developed of this module was partially funded by <a href="https://chanzuckerberg
         from rtl.RTLSupport import RTLManager
         try:
           rtlm = RTLManager()
-          rtlm.enableRTL();
+          rtlm.enableRTL()
           print(f"RTL support successfully enabled for '{current_language}'")
         except Exception as e:
           print(f"Failed to enable RTL supprt for '{current_language}' : \n\n {str(e)}")
@@ -471,6 +471,7 @@ class LanguageToolsWidget(ScriptedLoadableModuleWidget, VTKObservationMixin):
       else:
         self.logic.downloadTsFilesFromGithub(self.ui.githubRepositoryUrlEdit.text)
 
+      self.logic.normalizeTsFiles()
       self.logic.convertTsFilesToQmFiles()
       self.logic.installQmFiles()
 
@@ -711,6 +712,34 @@ class LanguageToolsLogic(ScriptedLoadableModuleLogic):
 
     # /temp.../SlicerLanguageTranslations-main/translations
     self.translationFilesFolder = f'{tempFolder}/{self.gitRepositoryName}-{self.slicerVersion}/translations'
+
+  def normalizeTsFiles(self):
+    """Rename all .ts files in the translation files folder so that the language code in the filename
+    matches the language code defined in the file's 'language' XML attribute, normalized using QLocale
+    (such as 'zh_CN').
+    """
+    if not self.translationFilesFolder:
+      raise ValueError(_("Translation files folder is not specified."))
+
+    import glob
+    import xml.etree.cElementTree as ET
+    tsFiles = glob.glob(f"{self.translationFilesFolder}/*.ts")
+
+    for file in tsFiles:
+      try:
+        tree = ET.ElementTree(file=file)
+        code = tree.getroot().attrib['language']
+        # Normalize language code using QLocale because the language selector uses this language code
+        locale = qt.QLocale(code).name()
+      except Exception as e:
+        logging.debug("Failed to determine language of translation file: {file} -- {text}".format(file=file, text=str(e)))
+        self.log("  " + _("Skipped. The translation file is invalid: {file}").format(file=file))
+        continue
+
+      baseName = os.path.basename(file).split('_')[0]
+      newFile = os.path.join(self.translationFilesFolder, f"{baseName}_{locale}.ts")
+      if os.path.abspath(file) != os.path.abspath(newFile):
+        os.replace(file, newFile)
 
   def convertTsFilesToQmFiles(self):
     if not self.translationFilesFolder:
